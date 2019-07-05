@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fibonacci Sequence</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th {
+            padding: 3px 0px;
+            width: 100px;
+        }
+        input {
+            width: 200px;
+        }
+        button {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        The Fibonacci Sequence is a sequence of numebers that is created starting with "0, 1".
+        The rest of the sequence is made by adding the two preceding numbers infinitely. The Fibonacci
+        Sequence is a math phenomenon that has been around for decades as it can be represented in
+        multiple facscinating ways.
+    </p>
+    <img src="images/equation.jpg" alt="Fibonacci Sequence Equation Representation">
+    <form>
+        <input type="text" id="n" placeholder="n">
+    </form>
+    <button onclick="output()">
+        Compute!
+    </button>
+    <div id="tablePrint">
+        <table>
+            <tr>
+                <th hidden>n</th>
+                <th hidden>fib(n)</th>
+            </tr>
+        </table>
+    </div>
+    <script type="application/Javascript" src="fib.js"></script>
+</body>
+</html>
