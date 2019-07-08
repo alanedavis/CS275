@@ -8,4 +8,4 @@ Be sure to unzip the file so that you have all of the documents in the same fold
 1. images (folder)
     1. equation.png
 
-</br></br>Double-click on the "aed84_HW1.html" file to run the website.
+</br>Double-click on the "aed84_HW1.html" file to run the website.
