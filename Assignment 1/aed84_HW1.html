@@ -1,49 +1,49 @@
+<!-- Basic HTML auto-generated setup -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Title that is seen in the tab name of Google Chrome -->
     <title>Fibonacci Sequence</title>
-    <style>
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-        th {
-            padding: 3px 0px;
-            width: 100px;
-        }
-        input {
-            width: 200px;
-        }
-        button {
-            width: 100px;
-        }
-    </style>
+    <!-- Allows for changes to be made by my external CSS sheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <p>
-        The Fibonacci Sequence is a sequence of numebers that is created starting with "0, 1".
-        The rest of the sequence is made by adding the two preceding numbers infinitely. The Fibonacci
-        Sequence is a math phenomenon that has been around for decades as it can be represented in
-        multiple facscinating ways.
-    </p>
-    <img src="images/equation.jpg" alt="Fibonacci Sequence Equation Representation">
-    <form>
-        <input type="text" id="n" placeholder="n">
-    </form>
-    <button onclick="output()">
-        Compute!
-    </button>
-    <div id="tablePrint">
-        <table>
-            <tr>
-                <th hidden>n</th>
-                <th hidden>fib(n)</th>
-            </tr>
-        </table>
+    <!-- Creating an div for the majority of the code -->
+    <div id="container">
+        <!-- Bolded "Created By" Header -->
+        <h1>
+            <b>Created By: Alan Davis</b>
+        </h1>
+        <!-- History of Fibonacci -->
+        <p id="history">
+            The Fibonacci Sequence is a sequence of numebers that is created starting with "0, 1".
+            The rest of the sequence is made by adding the two preceding numbers infinitely. The Fibonacci
+            Sequence is a math phenomenon that has been around for decades as it can be represented in
+            multiple facscinating ways.
+        </p>
+        <!-- Where the image is inserted -->
+        <img src="images/equation.png" alt="Fibonacci Sequence Equation Representation">
+        <!-- Fibonacci generated table title -->
+        <h1 id="gentitle">
+            <b>Fibonacci Generator</b>
+        </h1>
+        <!-- div containing the input form as well as the compute table button -->
+        <div id="usrinput">
+            <form>
+                <input type="text" id="n" placeholder="n">
+            </form>
+            <!-- Button with onclick referring to an external javascript function "output" -->
+            <button onclick="output()" id="compute">
+                Compute!
+            </button>
+        </div>
+        <!-- This is where the javascript code is spit out -->
+        <div id="output"></div>
     </div>
+    <!-- Script allows for the javascript to be read inside of the html file -->
     <script type="application/Javascript" src="fib.js"></script>
 </body>
 </html>
