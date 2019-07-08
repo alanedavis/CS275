@@ -2,7 +2,7 @@
 Be sure to unzip the file so that you have all of the documents in the same folder.
 
 **Should Contain**:
--aed84_HW1.html (file)
+..*aed84_HW1.html (file)
 -fib.js (file)
 -styles.css (file)
 -images (folder)
