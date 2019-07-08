@@ -1,6 +1,7 @@
 ## How to run my code
 Be sure to unzip the file so that you have all of the documents in the same folder.
-</br>**Should Contain**:
+
+**Should Contain**:
 -aed84_HW1.html (file)
 -fib.js (file)
 -styles.css (file)
