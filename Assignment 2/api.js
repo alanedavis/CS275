@@ -88,7 +88,7 @@ function compute() {
             forecast += '<p id="inform">All Temperatures Are In Degrees Farenheit</p>'
             forecast += '<div class = "grid-container">'
             $.each(data.list, function(index, val){
-                forecast += '<div class="grid-itme"><table>'
+                forecast += '<div><table>'
                 forecast += '<tr><th>' + formatDate(val.dt_txt) + '</th>'
                 forecast += '<tr><td style="text-align:center">' + capitalize(val.weather[0].description) + "<img src='https://openweathermap.org/img/w/" + val.weather[0].icon + ".png' style='vertical-align:middle'>" + '</td></tr>'
                 forecast += '<tr><td style="text-align:center">' + "Avg: " + val.main.temp + '&deg' + '</td></tr>'
