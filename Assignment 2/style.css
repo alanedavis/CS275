@@ -7,14 +7,6 @@
     grid-template-rows: repeat(14, 160px);
 }
 
-/* It is a center aligned tile with necessary padding all the way down */
-.grid-item {
-    width: 100%;
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-}
-
 h1 {
     text-align: center;
 }
