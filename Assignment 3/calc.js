@@ -1,8 +1,11 @@
+// Adding express module
 const express = require('express');
 const app = express();
+// Adding the path to the basepage & defining the port
 var path = require('path');
 var port = 8080;
 
+// The function for sum
 function sum(n) {
     var total = 0;
     for (var i = 0; i < n; i++) {
@@ -11,6 +14,7 @@ function sum(n) {
     return total
 }
 
+// Function for factorial
 function fact(n) {
     if (n == 1) {
         return n
@@ -19,6 +23,9 @@ function fact(n) {
     }
 }
 
+// The following lines define that my HTML file is the basepage
+// It also defines which HTML endings hold which functions
+// Also shows which port the server started on in the console
 app.use(express.static("."));
 
 app.get('/', function(req, res) {
@@ -37,6 +44,9 @@ app.listen(port, function() {
     console.log(`Server started on .... ${port}`)
 });
 
+
+// This function checks the input amd makes sure its valid
+// ALso says what function to use based on the user dropdown option
 function check() {
     var calc = '';
     var selection = $("#selection").val();
@@ -54,6 +64,9 @@ function check() {
     }
 }
 
+
+// This ajax shows the proper display message
+// Will show error or success message
 function compute(n, url, selection) {
     var calc = '';
 
