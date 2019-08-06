@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.js"></script>
+    <!-- The CSS file below makes the input form and button look fancy -->
+    <link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"/>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <!-- Tab Title -->
+    <title>Alan Davis CS275 Practicum</title>
+</head>
+<body>
+    <!-- Title at the top of the page -->
+    <h1>Practicum</h1>
+    <p>
+        <!-- Form holds all the input text -->
+        <form>
+            <select id="selection">
+                <option value="6"> Route 6 </option>
+                <option value="14"> Route 14 </option>
+                <option value="17"> Route 17 </option>
+                <option value="20"> Route 20 </option>
+                <option value="23"> Route 23 </option>
+            </select>
+        </form>
+    </p>
+    <!-- On click run the javascript function compute -->
+    <button onclick="check()" id="schedule">
+        <!-- Name of the button -->
+        Load Schedule
+    </button>
+    <div id="output"></div>
+    <!-- Footer of the page per say -->
+    <h5>CS 275</h5>
+    <script type="application/Javascript" src="schedule.js"></script>
+</body>
+</html>
