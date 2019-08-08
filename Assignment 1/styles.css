@@ -103,8 +103,9 @@ body{
 /* This is where I define how wide the white window is before the gray background color */
 #container{
     width: 1000px;
-    height: 100vh;
+    height: 100%;
     margin: 0 auto;
+    padding-bottom: 20px;
     background-color: #fff;
 }
 /* Header contains the "created by" and "fibonacci generator" */
