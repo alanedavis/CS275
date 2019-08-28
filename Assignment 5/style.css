@@ -1,0 +1,10 @@
+/* Simple header CSS */
+h1 {
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+}

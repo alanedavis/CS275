@@ -1,0 +1,105 @@
+<html>
+
+<head>
+  <title> Assignment #5 </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="style.css"/>
+  <link type="text/css" rel="stylesheet"
+  href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+  table, th, td {
+    border: 0.5px solid black;
+  }
+  </style>
+
+</head>
+
+<script>
+
+//ajax call to populate div with the specificied table from database jt676_hw5
+function Table(){
+  var table = document.getElementById("table").value;
+  var URL = "http://localhost:8080/" + table;
+  $.ajax({
+    type: "GET",
+    url: URL,
+    data: table,
+    dataType: "html",
+      success: function(msg){
+        document.getElementById("database").innerHTML = msg;
+      },
+      error: function(xhr, ajaxOptions, thrownError){
+        document.getElementById("database").innerHTML = "Error Fetching " + URL;
+      }
+  });
+}
+
+//ajax call to populate div with specficied mixutre of all three tables in the database
+function Search(){
+  var student = document.getElementById("student").value;
+  var quarter = document.getElementById("quarter").value;
+  var URL = "http://localhost:8080/table/" + student + "/" + quarter;
+  $.ajax({
+    type: "GET",
+    url: URL,
+    data: student,
+    dataType: "html",
+      success: function(msg){
+        document.getElementById("database").innerHTML = msg;
+      },
+      error: function(xhr, ajaxOptions, thrownError){
+        document.getElementById("database").innerHTML = "Error Fetching " + URL;
+      }
+  });
+}
+</script>
+
+<body>
+  <div align = "center">
+    <h1> Student Transcript Service </h1>
+  </div>
+
+  <h3><center> Academic Tables </center></h3>
+  <p><center> Choose One of the Option to Display Students Academic Information </center></p>
+
+  <select id = "table">
+    <option value = "student"> Students Table </option>
+    <option value = "course"> Courses Table </option>
+    <option value = "grades"> Grades Table </option>
+  </select>
+
+  <div>
+    <button onclick = "Table()"> Display Academic Information </button>
+    <br>
+  </div>
+  <br>
+  <h3><center> Student Transcript Search </center></h3>
+  <p><center> Choose a student and then choose their following Acdemic Quarter/Year </center></p>
+  <select id = "student">
+    <option value = "1"> Alan Davis </option>
+    <option value = "2"> Minjae Park </option>
+    <option value = "3"> Kawhi Leonard </option>
+    <option value = "4"> Jhene Aiko </option>
+    <option value = "5"> Jennifer Lopez </option>
+  </select>
+
+  <select id = "quarter">
+    <option value = "Spring19"> Spring Quarter of 2019 </option>
+    <option value = "Summer19"> Summer Quarter of 2019 </option>
+    <option value = "Fall19"> Fall Quarter of 2019 </option>
+    <option value = "Winter19"> Winter Quarter of 2019  </option>
+    <option value = "Spring20"> Spring Quarter of 2020 </option>
+  </select>
+
+  <div>
+    <button onclick = "Search()"> Search Students Transcript </button>
+  </div>
+  <div align = "center" id = "database">
+  </div>
+  <h5>CS 275</h5>
+</body>
+
+</html>
